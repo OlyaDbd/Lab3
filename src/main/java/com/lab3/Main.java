@@ -14,24 +14,26 @@ public class Main {
                 text.add(sentences);
                 sentences = scanner.nextLine();
             }
+
             List<String> sent = reverseStrings(text);
             for (String word : sent) {
                 System.out.print(word+" ");
             }
+
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
     }
 
     static List<String> reverseStrings(List<String> text) {
-        List<String> sentences = new ArrayList<>();
+        List<String> answer = new ArrayList<>();
         for (String line : text) {
             String[] words = line.split("[ .,]+");
             for (String word : words) {
-                sentences.add(new StringBuilder(word).reverse().toString());
+                answer.add(new StringBuilder(word).reverse().toString());
             }
         }
-        return sentences;
+        return answer;
     }
 }
 
