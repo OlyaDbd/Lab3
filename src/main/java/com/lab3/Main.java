@@ -26,14 +26,14 @@ public class Main {
     }
 
     static List<String> reverseStrings(List<String> text) {
-        List<String> sentences = new ArrayList<>();
+        List<String> answer = new ArrayList<>();
         for (String line : text) {
             String[] words = line.split("[ .,]+");
             for (String word : words) {
-                sentences.add(new StringBuilder(word).reverse().toString());
+                answer.add(new StringBuilder(word).reverse().toString());
             }
         }
-        return sentences;
+        return answer;
     }
 }
 
