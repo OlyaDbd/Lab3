@@ -14,10 +14,12 @@ public class Main {
                 text.add(sentences);
                 sentences = scanner.nextLine();
             }
+
             List<String> sent = reverseStrings(text);
             for (String word : sent) {
                 System.out.print(word+" ");
             }
+
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
